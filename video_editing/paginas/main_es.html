@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="background-color: #121319;"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-secondary-fixed": "#161b2d",
+                            "primary-fixed-dim": "#3cd7ff",
+                            "secondary-fixed": "#dee1fb",
+                            "on-primary-fixed": "#001f27",
+                            "on-primary-fixed-variant": "#004e5f",
+                            "text-primary": "#FFFFFF",
+                            "on-surface": "#e3e1eb",
+                            "outline-variant": "#3c494e",
+                            "error": "#ffb4ab",
+                            "surface-dim": "#121319",
+                            "on-primary-container": "#00586b",
+                            "surface": "#121319",
+                            "surface-card": "#12141F",
+                            "on-tertiary-container": "#6c4900",
+                            "text-muted": "#94A3B8",
+                            "surface-tint": "#3cd7ff",
+                            "primary-container": "#00d4ff",
+                            "surface-variant": "#34343b",
+                            "accent-glow": "rgba(0, 212, 255, 0.15)",
+                            "background": "#121319",
+                            "on-tertiary": "#432c00",
+                            "primary": "#a8e8ff",
+                            "error-container": "#93000a",
+                            "surface-container-highest": "#34343b",
+                            "surface-container-lowest": "#0d0e14",
+                            "on-surface-variant": "#bbc9cf",
+                            "on-error": "#690005",
+                            "surface-container-low": "#1a1b22",
+                            "inverse-surface": "#e3e1eb",
+                            "surface-container-high": "#292930",
+                            "on-tertiary-fixed": "#281900",
+                            "on-tertiary-fixed-variant": "#604100",
+                            "tertiary-container": "#feb528",
+                            "tertiary-fixed-dim": "#ffba3d",
+                            "surface-bright": "#383940",
+                            "surface-container": "#1e1f26",
+                            "tertiary": "#ffd9a1",
+                            "on-background": "#e3e1eb",
+                            "inverse-primary": "#00677e",
+                            "on-secondary-fixed-variant": "#42465a",
+                            "on-primary": "#003642",
+                            "on-error-container": "#ffdad6",
+                            "primary-fixed": "#b4ebff",
+                            "tertiary-fixed": "#ffdeae",
+                            "secondary-container": "#44485d",
+                            "on-secondary": "#2b2f43",
+                            "secondary": "#c2c5de",
+                            "secondary-fixed-dim": "#c2c5de",
+                            "outline": "#859398",
+                            "inverse-on-surface": "#2f3037",
+                            "on-secondary-container": "#b4b7d0"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-md": "16px",
+                            "margin-desktop": "80px",
+                            "stack-sm": "8px",
+                            "gutter": "24px",
+                            "stack-lg": "32px",
+                            "section-gap": "120px",
+                            "margin-mobile": "20px",
+                            "container-max": "1280px"
+                        },
+                        "fontFamily": {
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "label-sm": ["JetBrains Mono"],
+                            "label-md": ["JetBrains Mono"],
+                            "display-lg-mobile": ["Plus Jakarta Sans"],
+                            "body-lg": ["Inter"],
+                            "headline-sm": ["Plus Jakarta Sans"],
+                            "body-md": ["Inter"]
+                        },
+                        "fontSize": {
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                            "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="font-body-md text-body-md bg-surface-dim text-on-surface">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-20 px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary tracking-tighter">REIMA</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<div class="flex items-center gap-4 bg-surface-container-low px-4 py-1.5 rounded-full border border-outline-variant/20">
+<!-- <button class="text-primary font-bold text-label-md">EN</button> -->
+<!-- <div class="w-px h-4 bg-outline-variant/30"></div> -->
+
+<button class="text-on-surface-variant hover:text-primary transition-colors text-label-md" style="width: 100px;">
+    <a style="text-decoration: none; display: flex; align-items: center; justify-content: space-between;" href="paginas/main_es.html">
+        Español
+        <img style="width: 30px;" src="imagenes/españa redondo.png" alt="change languague to spanish">
+    </a>
+</button>
+
+</div>
+<a class="px-6 py-2.5 bg-primary-container text-on-primary font-bold rounded-lg hover:scale-105 transition-transform active:scale-95" href="#contact-hero">
+                Contact
+            </a>
+</div>
+<!-- Mobile Menu Icon (Visual Only) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Profile Section -->
+<section class="relative">
+<div class="h-64 md:h-80 w-full bg-surface-bright relative border-b border-outline-variant/30">
+<div class="absolute inset-0 bg-primary/10">
+    <img style="object-fit: cover; width: 100%; height: 100%;" src="main.jpg" alt="main_photo">
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-6 relative -mt-20 md:-mt-24 mb-16 flex flex-col items-center">
+<div class="relative group">
+                <div class="absolute -inset-1 bg-primary-container/30 blur-xl rounded-full group-hover:bg-primary-container/50 transition-colors"></div>
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-background bg-surface-container-high overflow-hidden relative z-10">
+                    <img src="profile_picture.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+            </div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="relative flex items-center justify-center overflow-hidden px-6 pb-section-gap">
+<div class="relative z-10 max-w-4xl text-center">
+<!-- <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-[0.2em]">Next Level Visual Narratives</span>
+</div> -->
+<h1 class="font-display-lg text-display-lg md:text-display-lg leading-tight mb-gutter text-text-primary">
+                Transforming Raw Footage Into <span class="text-primary-container">Digital Gold</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-muted mb-stack-lg max-w-2xl mx-auto">
+                Boutique video editing engineered for high-growth brands and content creators. Precision cuts, cybernetic pacing, and immersive motion design.
+            </p>
+<!-- <div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="px-8 py-4 bg-primary-container text-on-primary font-bold rounded-lg transition-all hover:brightness-110" href="#work">
+                    View Showreel
+                </a>
+<a class="px-8 py-4 border border-primary-container/50 text-primary-container font-bold rounded-lg hover:bg-primary-container/10 transition-all" href="#contact-hero">
+                    Get a Quote
+                </a>
+</div> -->
+</div>
+</section>
+<!-- Main Contact / CTA (Renamed to contact-hero for nav link) -->
+<section class="py-section-gap px-6 bg-surface-container-lowest/50" id="contact-hero">
+<div class="max-w-container-max mx-auto">
+<div class="bg-surface-container p-10 rounded-2xl text-center relative overflow-hidden border border-outline-variant/20">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 blur-3xl rounded-full"></div>
+<h2 class="font-headline-md text-headline-md mb-stack-md text-text-primary">Start Your Evolution</h2>
+<p class="text-text-muted mb-stack-lg max-w-xl mx-auto">Ready to elevate your content? Talk to me directly</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-2xl mx-auto">
+<a class="flex items-center justify-center gap-3 p-5 bg-surface-container-high rounded-xl group border border-outline-variant/30 hover:border-primary/50 transition-colors" href="https://wa.me/+5359274195">
+<div class="w-10 h-10 rounded-lg bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/40 transition-colors">
+<span class="material-symbols-outlined text-[#25D366]">chat</span>
+</div>
+<span class="font-bold text-lg text-on-surface">WhatsApp</span>
+</a>
+<a class="flex items-center justify-center gap-3 p-5 bg-surface-container-high rounded-xl group border border-outline-variant/30 hover:border-primary/50 transition-colors" href="https://t.me/reimamp3">
+<div class="w-10 h-10 rounded-lg bg-[#0088cc]/20 flex items-center justify-center group-hover:bg-[#0088cc]/40 transition-colors">
+<span class="material-symbols-outlined text-[#0088cc]">send</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Telegram</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Format Section -->
+<!-- <section class="py-section-gap px-6" id="work"> -->
+<section class="px-6" id="work">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-gutter border-l-4 border-primary pl-6">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase mb-2 block">Long content</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Horizontal Format</h2>
+</div>
+<div class="hidden md:block text-text-muted text-body-md italic">16:9 Aspect Ratio</div>
+</div>
+<div class="slider-container flex overflow-x-auto snap-x snap-mandatory gap-gutter pb-4">
+<!-- YouTube Placeholder 1 -->
+<div class="flex-none w-full md:w-[calc(50%-12px)] snap-start">
+<div class="bg-surface-container-high aspect-video rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center relative">
+
+<iframe style="width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/eIq-lkTrODc?si=JKSC34hbdEFQjURx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+</div>
+</div>
+<!-- YouTube Placeholder 2 -->
+<div class="flex-none w-full md:w-[calc(50%-12px)] snap-start">
+<div class="bg-surface-container-high aspect-video rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center relative">
+
+<iframe style="width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/ozvnOsDEz8M?si=ZxvBOjJAGSp6XRyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+</div>
+</div>
+<!-- View More Slider Action Long Format-->
+<div class="flex-none w-48 snap-start flex items-center justify-center">
+<a class="flex flex-col items-center gap-4 group" href="#">
+<div class="w-16 h-16 rounded-full border border-primary-container/30 flex items-center justify-center group-hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary">arrow_forward</span>
+</div>
+<span class="font-bold text-primary-container">See more</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Vertical Format Section -->
+<!-- <section class="py-section-gap px-6 bg-surface-container-lowest/30"> -->
+<section class="py-section-gap px-6 bg-surface-container-lowest/30">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-gutter border-l-4 border-primary pl-6">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase mb-2 block">Social Pulse</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Vertical Format (Reels)</h2>
+</div>
+<div class="hidden md:block text-text-muted text-body-md italic">9:16 Retention-Focused</div>
+</div>
+<div class="slider-container flex overflow-x-auto snap-x snap-mandatory gap-gutter pb-4">
+<!-- Vertical Placeholder 1 -->
+<div class="flex-none w-2/3 md:w-[calc(25%-18px)] snap-start contenedor-reel">
+<div class="bg-surface-container-high aspect-[9/16] rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="absolute inset-0 bg-surface-container-highest/60"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+
+<video src="videos/2.mp4" controls></video>
+
+<button class="w-12 h-12 rounded-full bg-primary-container/80 text-on-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-label-sm font-label-sm bg-primary/20 backdrop-blur-md px-2 py-1 rounded border border-primary/30">Podcast Clip</span>
+</div>
+</div>
+</div>
+<!-- Vertical Placeholder 2 -->
+<div class="flex-none w-2/3 md:w-[calc(25%-18px)] snap-start contenedor-reel">
+<div class="bg-surface-container-high aspect-[9/16] rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="absolute inset-0 bg-surface-container-highest/60"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+
+<video src="videos/4.mp4" controls></video>
+
+<button class="w-12 h-12 rounded-full bg-primary-container/80 text-on-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-label-sm font-label-sm bg-primary/20 backdrop-blur-md px-2 py-1 rounded border border-primary/30">Lifestyle Reel</span>
+</div>
+</div>
+</div>
+<!-- Vertical Placeholder 3 -->
+<div class="flex-none w-2/3 md:w-[calc(25%-18px)] snap-start contenedor-reel">
+<div class="bg-surface-container-high aspect-[9/16] rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="absolute inset-0 bg-surface-container-highest/60"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+
+<video src="videos/5.mp4" controls></video>
+
+<button class="w-12 h-12 rounded-full bg-primary-container/80 text-on-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-label-sm font-label-sm bg-primary/20 backdrop-blur-md px-2 py-1 rounded border border-primary/30">Gaming Edit</span>
+</div>
+</div>
+</div>
+<!-- Vertical Placeholder 4 -->
+<div class="flex-none w-2/3 md:w-[calc(25%-18px)] snap-start contenedor-reel">
+<div class="bg-surface-container-high aspect-[9/16] rounded-xl overflow-hidden group relative border border-outline-variant/30">
+<div class="absolute inset-0 bg-surface-container-highest/60"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+
+<video src="videos/3.mp4" controls></video>
+
+<button class="w-12 h-12 rounded-full bg-primary-container/80 text-on-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-label-sm font-label-sm bg-primary/20 backdrop-blur-md px-2 py-1 rounded border border-primary/30">Educational</span>
+</div>
+</div>
+</div>
+<!-- View More Slider Action Reels -->
+<div class="flex-none w-48 snap-start flex items-center justify-center">
+<a class="flex flex-col items-center gap-4 group" href="#">
+<div class="w-16 h-16 rounded-full border border-primary-container/30 flex items-center justify-center group-hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary">arrow_forward</span>
+</div>
+<span class="font-bold text-primary-container">See more</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-gap px-margin-mobile max-w-container-max mx-auto" id="services">
+<div class="mb-stack-lg text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-text-primary mb-2">Specialized Servicess</h2>
+<div class="h-1 w-20 bg-primary-container mx-auto md:mx-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="glass-card p-stack-lg rounded-2xl flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md">bolt</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-4">Viral Content</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Dynamic editing for Reels, TikTok, and Shorts designed to retain infinite scroll and maximize engagement.
+                    </p>
+<ul class="mt-auto space-y-2">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Dynamic Subtitles
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Aggressive Sound Design
+                        </li>
+</ul>
+</div>
+<!-- Service 2 -->
+<div class="glass-card p-stack-lg rounded-2xl flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md">smart_display</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-4">YouTube Mastery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Long-form storytelling with flawless pacing. We transform complex ideas into stories that people watch until the very end.
+                    </p>
+<ul class="mt-auto space-y-2">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Structured Storytelling
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Motion Graphics 2D/3D
+                        </li>
+</ul>
+</div>
+<!-- Service 3 -->
+<div class="glass-card p-stack-lg rounded-2xl flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md">movie</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-4">Commercial &amp; Brand</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Cinematic aesthetics for premium brands seeking to stand out with superior visual quality and expert color grading.
+                    </p>
+<ul class="mt-auto space-y-2">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Color Grading Pro
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Cinematic Look
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final Contact Section -->
+<section class="py-section-gap px-6 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-md text-headline-md mb-gutter text-text-primary">Secure Your Production Slot</h2>
+<div class="flex flex-col md:flex-row gap-gutter justify-center max-w-2xl mx-auto">
+<a class="flex-1 flex items-center justify-center gap-3 py-4 bg-surface-container border border-outline-variant/30 rounded-xl hover:border-[#25D366] transition-colors" href="https://wa.me/+5359274195">
+<span class="material-symbols-outlined text-[#25D366]">chat</span>
+<span class="font-bold">WhatsApp</span>
+</a>
+<a class="flex-1 flex items-center justify-center gap-3 py-4 bg-surface-container border border-outline-variant/30 rounded-xl hover:border-[#0088cc] transition-colors" href="https://t.me/reimamp3">
+<span class="material-symbols-outlined text-[#0088cc]">send</span>
+<span class="font-bold">Telegram</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-stack-lg border-t border-outline-variant/30 px-6">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-headline-sm text-lg font-bold text-primary tracking-tighter">REIMA</div>
+<p class="text-text-muted text-sm">©2026 Reima video editor</p>
+<div class="flex gap-stack-md text-text-muted text-sm">
+</div>
+</div>
+</footer>
+</body></html>
