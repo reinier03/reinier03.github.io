@@ -30,6 +30,12 @@
     margin-bottom: 10%;
 } */
 
-/* @media (max-width: 767px) {
-    
-} */
+@media screen and (max-width: 767px) {
+
+    section[class="py-section-gap px-6 bg-surface-container-lowest/30"], #work{
+        width: 100% !important; 
+    }
+
+}
+
+
